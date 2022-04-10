@@ -4,6 +4,7 @@ import TextField from "@mui/material/TextField";
 import Autocomplete from "@mui/material/Autocomplete";
 import { useEffect, useState } from "react";
 import * as yup from 'yup';
+
 let schema = yup.object().shape({
     currency: yup.number().required().positive().integer(),
   });
@@ -52,7 +53,7 @@ export default function CurrencyExchange({
     <>
       <Box>
         <div className="text_align_center">
-          <span>Exchange Money</span>
+          <h2>Exchange Money</h2>
         </div>
         <Grid container justifyContent="center">
         <Grid item  xs={8}>
@@ -94,7 +95,9 @@ export default function CurrencyExchange({
 
               <Grid item  xs>
               <Grid>
-                 100
+                 <span style={{fontSize:30}}>
+                     100
+                 </span>
                 </Grid>
               </Grid>
             </Grid>

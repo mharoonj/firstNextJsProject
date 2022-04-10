@@ -10,6 +10,11 @@ import createEmotionCache from '../src/createEmotionCache';
 import  { AppProps } from 'next/app';
 import CustomLayout from '../components/layouts/layouts';
 import "../styles/globals.css"
+import "../styles/css/weather-icons.css"
+import "../styles/css/weather-icons.min.css"
+import "../styles/css/weather-icons-wind.css"
+import "../styles/css/weather-icons-wind.min.css"
+
 // Client-side cache shared for the whole session
 // of the user in the browser.
 
