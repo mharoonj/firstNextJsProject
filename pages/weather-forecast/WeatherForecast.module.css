@@ -1,0 +1,40 @@
+
+.wi-day-sunny{
+        background-image:url("./img/sunny.jpg");
+        background-size: cover;
+        overflow:auto;
+        height:93vh;  
+}
+.firstImg{
+    background-image:url("./img/first.jpg");
+    background-size: cover;
+    overflow:auto;
+    height:93vh;  
+}
+
+
+
+.wi-cloud{
+    background-image:url("./img/overcast.jpg");
+    background-size: cover;
+    overflow:auto;
+    height:93vh;  
+}
+
+
+
+.wi-day-cloudy{
+    background-image:url("./img/partialcloud.jpeg");
+    background-size: cover;
+    overflow:auto;
+    height:93vh;  
+}
+
+
+
+.wi-day-rain-mix{
+    background-image:url("./img/partialrainy.jpg");
+    background-size: cover;
+    overflow:auto;
+    height:93vh;  
+}

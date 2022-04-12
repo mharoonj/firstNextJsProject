@@ -1,11 +1,11 @@
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
-import {Current} from "../Types/weatherTypes/types"
+import {Current, Location} from "../Types/weatherTypes/types"
 import Typography from "@mui/material/Typography";
 import { Button, CardActionArea, Grid } from "@mui/material";
 import GetWeatherIconClasses from "./IconTypes";
 
-export default function CurrentWeather({current}:{current:Current}) {
+export default function CurrentWeather({current,location}:{current:Current, location:Location}) {
   return (
     <Grid item xs={3}>
       <Card sx={{ maxWidth: 345, minWidth: 345 }}>
@@ -36,7 +36,11 @@ export default function CurrentWeather({current}:{current:Current}) {
             <Typography gutterBottom variant="h5" component="div">
               {current.condition.text}
             </Typography>
-            <Typography variant="body2" color="text.secondary"></Typography>
+            <Typography variant="body2" color="text.secondary">
+              Name : {location.name} <br/>
+              Region : {location.region} <br/>
+              Country : {location.country}
+            </Typography>
           </CardContent>
         </CardActionArea>
       </Card>

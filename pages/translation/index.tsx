@@ -5,7 +5,7 @@ import Autocomplete from "@mui/material/Autocomplete";
 import { useEffect, useState } from "react";
 import CircularProgress from "@mui/material/CircularProgress";
 import { useLoaded } from "../../components/customHooks/loading";
-
+import styles from "./Translation.module.css";
 export default function Translation({ languages }: { languages: string[] }) {
   const [state, setState] = useState<{
     value: string | null;
@@ -64,6 +64,7 @@ export default function Translation({ languages }: { languages: string[] }) {
   console.log(state);
   return (
     <>
+    <div className={styles.translation_img_bg}>
       <Box>
         <div className="text_align_center">
           <h2>Language Translation</h2>
@@ -152,6 +153,7 @@ export default function Translation({ languages }: { languages: string[] }) {
           </Grid>
         </Grid>
       </Box>
+      </div>
     </>
   );
 }

@@ -1,0 +1,7 @@
+
+.exchange_img_bg{
+    background-image:url("./img/exchange.webp");
+    background-size: cover;
+    overflow:auto;
+    height:93vh;  
+}

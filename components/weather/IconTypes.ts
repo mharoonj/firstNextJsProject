@@ -12,7 +12,11 @@ const GetWeatherIconClasses=(text:string)=>{
         Sunny: "wi wi-day-sunny"
     }
     const removeSpace:string = text.split(" ").join("")
-    return WeatherIconClasses[removeSpace]
-    
+    try{ 
+     return WeatherIconClasses[removeSpace]
+
+    }catch(e){
+        return "wi wi-day-sunny"
+    }    
 }
 export default GetWeatherIconClasses;

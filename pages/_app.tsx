@@ -14,6 +14,7 @@ import "../styles/css/weather-icons.css"
 import "../styles/css/weather-icons.min.css"
 import "../styles/css/weather-icons-wind.css"
 import "../styles/css/weather-icons-wind.min.css"
+import { transitions, positions, Provider as AlertProvider } from 'react-alert'
 
 // Client-side cache shared for the whole session
 // of the user in the browser.
@@ -37,7 +38,11 @@ export default function MyApp(props: AppProps) {
 				build upon. */}
 				
 				<CssBaseline />
-        <CustomLayout> <Component {...pageProps} /></CustomLayout>
+
+        <CustomLayout>
+           <Component {...pageProps} />
+           
+           </CustomLayout>
 		
 			</ThemeProvider>
       </>

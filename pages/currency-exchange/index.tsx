@@ -6,7 +6,7 @@ import CircularProgress from "@mui/material/CircularProgress";
 import { useEffect, useState } from "react";
 import * as yup from "yup";
 import { useLoaded } from "../../components/customHooks/loading";
-
+import styles from "./CurrencyExchange.module.css";
 let schema = yup.object().shape({
   currency: yup.number().required().positive().integer(),
 });
@@ -73,6 +73,7 @@ export default function CurrencyExchange({
 
   return (
     <>
+    <div className={styles.exchange_img_bg}>
       <Box>
         <div className="text_align_center">
           <h2>Exchange Money</h2>
@@ -154,6 +155,7 @@ export default function CurrencyExchange({
           </Grid>
         </Grid>
       </Box>
+      </div>
     </>
   );
 }
