@@ -2,7 +2,7 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import { Current, Forecastday } from "../Types/weatherTypes/types";
 import Typography from "@mui/material/Typography";
-import { Button, CardActionArea, Grid } from "@mui/material";
+import {  CardActionArea, Grid } from "@mui/material";
 import GetWeatherIconClasses from "./IconTypes";
 export default function FutureWeatherCard({
   forecast,
@@ -55,7 +55,7 @@ export default function FutureWeatherCard({
             <Typography gutterBottom variant="h5" component="div">
               {forecast.day.condition.text}
             </Typography>
-            <Typography variant="body2" color="text.secondary"></Typography>
+         
           </CardContent>
         </CardActionArea>
       </Card>
