@@ -1,4 +1,4 @@
-import { Button, Grid, Input } from "@mui/material";
+import { Button, Grid, Input, Typography } from "@mui/material";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import Autocomplete from "@mui/material/Autocomplete";
@@ -30,7 +30,7 @@ export default function CurrencyExchange({
   });
   const loaded = useLoaded();
   const getCalculatedAmout = () => {
-    setState({ ...state, loading: true });
+    setState({ ...state, loading: true,value:"" });
     const options = {
       method: "GET",
       headers: {
@@ -130,6 +130,7 @@ export default function CurrencyExchange({
                       onClick={() => {
                         getCalculatedAmout();
                       }}
+                      disabled={!state.value}
                     >
                       {" "}
                       {state.loading ? (
@@ -141,10 +142,12 @@ export default function CurrencyExchange({
                   </Grid>
                 </Grid>
 
-                <Grid item xs>
-                  <Grid>
-                    <span style={{ fontSize: 30 }}>{loaded && state.rate && eval(`${state.rate}*${state.value}`)}</span>
-                  </Grid>
+                <Grid item xs={12} sm={6}>
+                  {state.value && <Grid>
+                  <Typography variant="body2" color="text.secondary">1 {state.from} equals {parseFloat(state.rate).toFixed(2)} {state.to}</Typography>
+                        
+                    <span style={{ fontSize: 30 }}>{loaded && state.rate && eval(`${state.rate}*${state.value}`).toFixed(2)} {state.to}</span>
+                  </Grid>}
                 </Grid>
               </Grid>
             </Grid>

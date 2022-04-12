@@ -85,7 +85,7 @@ export default function Translation({ languages }: { languages: string[] }) {
                     <TextField
                       {...params}
                       name="translated"
-                      label="Select Language to translate "
+                      label="Select Language to translate in"
                       variant="standard"
                       
                     />
@@ -97,9 +97,10 @@ export default function Translation({ languages }: { languages: string[] }) {
                 container
                 spacing={3}
                 justifyContent="center"
-                style={{ marginTop: 50, paddingLeft: 16 }}
+                alignItems="center"
+                style={{ marginTop: 50 }}
               >
-                <Grid item xs={12} md={5} sx={{ paddingRight: 16 }}>
+                <Grid item xs={12} md={5} sx={{ paddingRight: 4 }}>
                   <Grid>
                     <Input
                       fullWidth
